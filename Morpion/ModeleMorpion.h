@@ -17,8 +17,7 @@
 
 
 - (void)placerCase: (int)index;
--(id) init;
--(char)premierJoueur;
+-(id) initWithPremierJoueur:(char) premierJoueur;
 -(char)dernierCoupGagnant;
 -(void) afficherGrille;
 -(void) changerJoueur;

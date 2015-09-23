@@ -12,12 +12,12 @@
 
 @implementation ModeleMorpion
 
--(id)init {
+-(id)initWithPremierJoueur:(char)premierJoueur {
     self = [super init];
     self.cases = [[NSMutableArray alloc]init];
- //   if (premierJoueur=='X'|| premierJoueur=='0')
-   //     self.tour=premierJoueur;
-    /*else*/ self.tour= 'O'; //Valeur par défaut
+   if (premierJoueur=='X'|| premierJoueur=='0')
+        self.tour=premierJoueur;
+    else self.tour= 'O'; //Valeur par défaut
     
     
     for (int i=0; i<9; i++) {
