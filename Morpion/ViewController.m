@@ -18,13 +18,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.mod=[[ModeleMorpion alloc ]init];
+    self.dernierGagnant='-'; // Une valeur par défaut sera choisie par le domaine
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 -(ModeleMorpion*) mod{
-    if (!_mod) _mod =[[ModeleMorpion alloc] init];
+    if (!_mod) _mod =[[ModeleMorpion alloc] initWithPremierJoueur:self.dernierGagnant];
     return _mod;
 }
 
@@ -40,7 +40,7 @@
 
     
     
-    [self.mod placerCase:[sender tag]];
+    [self.mod placerCase:(int)[sender tag]];
     [sender setTitle :[NSString stringWithFormat:@"%c", [self.mod tour]] forState:UIControlStateNormal];
     
     
@@ -60,6 +60,7 @@
     for (int i=0; i<9; i++){
         [(UIButton*)[self.view viewWithTag:i] setEnabled:false];
     }
+    self.dernierGagnant=[self.mod tour];
     
     
 }

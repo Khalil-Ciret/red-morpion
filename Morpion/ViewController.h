@@ -14,6 +14,7 @@
 @property (strong,nonatomic) ModeleMorpion *mod ;
 @property (weak, nonatomic) IBOutlet UILabel *gagnant;
 @property (weak, nonatomic) IBOutlet UIButton *recommencer;
+@property(nonatomic) char dernierGagnant;
 
 
 
