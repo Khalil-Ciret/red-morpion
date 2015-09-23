@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "modeleMorpion.h"
 
 @interface ViewController ()
 
@@ -17,8 +18,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.mod=[[ModeleMorpion alloc ]init];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+-(ModeleMorpion*) mod{
+    if (!_mod) _mod =[[ModeleMorpion alloc] init];
+    return _mod;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,4 +35,53 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)action:(id)sender {
+    
+
+    
+    
+    [self.mod placerCase:[sender tag]];
+    [sender setTitle :[NSString stringWithFormat:@"%c", [self.mod tour]] forState:UIControlStateNormal];
+    
+    
+    if ([self.mod dernierCoupGagnant]==[self.mod tour])
+        [self afficherGagnant];
+    if ([self.mod dernierCoupGagnant]=='-')
+        [self afficherEgalité];
+        
+    [self.mod changerJoueur];
+    [sender setEnabled: NO];
+    
+
+}
+
+- (void) afficherGagnant{
+    self.gagnant.text= [ NSString stringWithFormat:@"%@%c%@",@"Félicitations! Les ",[self.mod tour],@" ont gagné!"];
+    for (int i=0; i<9; i++){
+        [(UIButton*)[self.view viewWithTag:i] setEnabled:false];
+    }
+    
+    
+}
+
+-(void) afficherEgalité{
+    self.gagnant.text= @"C'est une égalité. Dommage.";
+}
+
+
+
+
+
+
+
+- (IBAction)recommencer:(id)sender {
+    for (int i=0; i<9; i++){
+        [(UIButton*)[self.view viewWithTag:i] setEnabled:true];
+        [(UIButton*)[self.view viewWithTag:i] setTitle:@"-" forState:UIControlStateNormal];
+    }
+    self.gagnant.text=@"";
+    self.mod=nil;
+    
+    
+}
 @end

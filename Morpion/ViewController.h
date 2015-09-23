@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModeleMorpion.h"
+
 
 @interface ViewController : UIViewController
+@property (strong,nonatomic) ModeleMorpion *mod ;
+@property (weak, nonatomic) IBOutlet UILabel *gagnant;
+@property (weak, nonatomic) IBOutlet UIButton *recommencer;
+
+
+
+
+- (IBAction)action:(id)sender;
+-(void) afficherGagnant;
+-(void) afficherEgalité;
+- (IBAction)recommencer:(id)sender;
+
+
+
 
 @end

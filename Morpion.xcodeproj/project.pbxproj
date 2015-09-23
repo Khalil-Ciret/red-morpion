@@ -21,6 +21,8 @@
 		9D54D14A1B95A75100E0DDEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D54D12C1B95A75100E0DDEE /* UIKit.framework */; };
 		9D54D1521B95A75100E0DDEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D54D1501B95A75100E0DDEE /* InfoPlist.strings */; };
 		9D54D1541B95A75100E0DDEE /* MorpionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D54D1531B95A75100E0DDEE /* MorpionTests.m */; };
+		9D54D15F1B95AE0300E0DDEE /* modeleMorpion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D54D15E1B95AE0300E0DDEE /* modeleMorpion.m */; };
+		9D54D1621B95C93700E0DDEE /* CaseMorpion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D54D1611B95C93700E0DDEE /* CaseMorpion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		9D54D14F1B95A75100E0DDEE /* MorpionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MorpionTests-Info.plist"; sourceTree = "<group>"; };
 		9D54D1511B95A75100E0DDEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9D54D1531B95A75100E0DDEE /* MorpionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MorpionTests.m; sourceTree = "<group>"; };
+		9D54D15D1B95AE0300E0DDEE /* modeleMorpion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modeleMorpion.h; sourceTree = "<group>"; };
+		9D54D15E1B95AE0300E0DDEE /* modeleMorpion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = modeleMorpion.m; sourceTree = "<group>"; };
+		9D54D1601B95C93700E0DDEE /* CaseMorpion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaseMorpion.h; sourceTree = "<group>"; };
+		9D54D1611B95C93700E0DDEE /* CaseMorpion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaseMorpion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				9D54D1371B95A75100E0DDEE /* AppDelegate.h */,
 				9D54D1381B95A75100E0DDEE /* AppDelegate.m */,
 				9D54D13A1B95A75100E0DDEE /* Main.storyboard */,
+				9D54D1601B95C93700E0DDEE /* CaseMorpion.h */,
+				9D54D1611B95C93700E0DDEE /* CaseMorpion.m */,
+				9D54D15E1B95AE0300E0DDEE /* modeleMorpion.m */,
+				9D54D15D1B95AE0300E0DDEE /* modeleMorpion.h */,
 				9D54D13D1B95A75100E0DDEE /* ViewController.h */,
 				9D54D13E1B95A75100E0DDEE /* ViewController.m */,
 				9D54D1401B95A75100E0DDEE /* Images.xcassets */,
@@ -196,7 +206,7 @@
 		9D54D11D1B95A75100E0DDEE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = ApertureScience;
 				TargetAttributes = {
 					9D54D1451B95A75100E0DDEE = {
@@ -250,8 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D54D13F1B95A75100E0DDEE /* ViewController.m in Sources */,
+				9D54D1621B95C93700E0DDEE /* CaseMorpion.m in Sources */,
 				9D54D1391B95A75100E0DDEE /* AppDelegate.m in Sources */,
 				9D54D1351B95A75100E0DDEE /* main.m in Sources */,
+				9D54D15F1B95AE0300E0DDEE /* modeleMorpion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +331,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -379,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Morpion/Morpion-Prefix.pch";
 				INFOPLIST_FILE = "Morpion/Morpion-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ApertureScience.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,6 +406,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Morpion/Morpion-Prefix.pch";
 				INFOPLIST_FILE = "Morpion/Morpion-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ApertureScience.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -413,6 +428,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "MorpionTests/MorpionTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ApertureScience.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -431,6 +447,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Morpion/Morpion-Prefix.pch";
 				INFOPLIST_FILE = "MorpionTests/MorpionTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ApertureScience.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -456,6 +473,7 @@
 				9D54D1591B95A75100E0DDEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D54D15A1B95A75100E0DDEE /* Build configuration list for PBXNativeTarget "MorpionTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +482,7 @@
 				9D54D15C1B95A75100E0DDEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
